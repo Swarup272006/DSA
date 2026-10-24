@@ -1,20 +1,9 @@
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        int n = s.size() ;
-        int st = 0 ;
-        int end = n - 1 ;
-        
-        while (st < n / 2 ){
-            char temp = s[st] ;
-            s[st] = s[end] ;
-            s[end] = temp ;
-
-            st ++ ;
-            end-- ;
+        for (int i = 0 ; i < s.size() / 2 ; i++){
+            swap(s[i] , s[s.size()-i - 1]) ;
         }
-
-        
         
     }
 };
